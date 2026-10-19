@@ -1,0 +1,518 @@
+:root {
+    --vermelho: #ff1018;
+    --preto: #171717;
+    --branco: #ffffff;
+    --cinza: #efeff1;
+    --cinza-texto: #777777;
+    --fonte: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte);
+    color: var(--preto);
+    background: var(--branco);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    height: 30px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--branco);
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    font-size: 6px;
+    font-weight: 800;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.menu a {
+    font-size: 5.5px;
+    font-weight: 500;
+}
+
+/* APRESENTAÇÃO */
+
+.inicio {
+    min-height: 255px;
+    padding: 40px 20px;
+    background: var(--cinza);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.inicio-conteudo {
+    width: 100%;
+    max-width: 320px;
+}
+
+.inicio h1 {
+    font-size: 30px;
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    margin-bottom: 15px;
+}
+
+.inicio h1 span {
+    color: var(--vermelho);
+}
+
+.inicio p {
+    max-width: 250px;
+    margin: 0 auto 15px;
+    font-size: 8px;
+    line-height: 1.5;
+    color: var(--cinza-texto);
+}
+
+.botao {
+    width: 100%;
+    max-width: 210px;
+    min-height: 22px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7px auto 0;
+    font-size: 7px;
+    transition: 0.2s;
+}
+
+.botao-principal {
+    background: var(--vermelho);
+    color: var(--branco);
+    border: 1px solid var(--vermelho);
+}
+
+.botao-secundario {
+    color: var(--vermelho);
+    background: transparent;
+    border: 1px solid var(--vermelho);
+}
+
+.botao:hover,
+.botao-card:hover,
+.botao-enviar:hover {
+    opacity: 0.8;
+}
+
+/* SOBRE MIM */
+
+.sobre {
+    min-height: 300px;
+    padding: 65px 20px 30px;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sobre-conteudo {
+    width: 100%;
+    max-width: 320px;
+}
+
+.sobre h2 {
+    font-size: 24px;
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.sobre h2 span {
+    color: var(--vermelho);
+}
+
+.sobre p {
+    font-size: 7.5px;
+    line-height: 1.5;
+    color: var(--cinza-texto);
+    margin-bottom: 5px;
+}
+
+.foto-sobre {
+    width: 155px;
+    height: 105px;
+    margin-top: 20px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+/* PROJETOS */
+
+.projetos {
+    padding: 38px 7% 40px;
+    background: var(--cinza);
+}
+
+.projetos-intro {
+    text-align: center;
+    margin: 0 auto 18px;
+    max-width: 320px;
+}
+
+.projetos-intro h2 {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.projetos-intro p {
+    font-size: 7.5px;
+    line-height: 1.5;
+    color: var(--cinza-texto);
+}
+
+.lista-projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.card-projeto {
+    width: 100%;
+    height: 145px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #263b46;
+}
+
+.card-projeto::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.05) 90%);
+}
+
+.card-projeto>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    right: 10px;
+    bottom: 9px;
+    color: var(--branco);
+}
+
+.card-info h3 {
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.card-info p {
+    font-size: 6.5px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.botao-card {
+    min-height: 18px;
+    width: 100%;
+    border-radius: 30px;
+    background: var(--vermelho);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7px;
+    transition: 0.2s;
+}
+
+/* CONTATO */
+
+.contato {
+    padding: 48px 8% 35px;
+    background: var(--cinza);
+    text-align: center;
+}
+
+.contato-intro {
+    max-width: 300px;
+    margin: 0 auto 18px;
+}
+
+.contato h2 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+.contato-intro p {
+    font-size: 8px;
+    line-height: 1.5;
+    color: var(--cinza-texto);
+}
+
+.formulario {
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto;
+    padding: 14px;
+    border-radius: 7px;
+    background: var(--branco);
+    text-align: left;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 9px;
+}
+
+.campo label {
+    font-size: 6.5px;
+    font-weight: 500;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #eaeaec;
+    border-radius: 20px;
+    padding: 9px 10px;
+    font-family: var(--fonte);
+    font-size: 6.5px;
+    color: var(--preto);
+}
+
+.campo input {
+    height: 25px;
+}
+
+.campo textarea {
+    min-height: 65px;
+    resize: vertical;
+    border-radius: 9px;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    box-shadow: 0 0 0 1px var(--vermelho);
+}
+
+.botao-enviar {
+    width: 100%;
+    min-height: 24px;
+    border: none;
+    border-radius: 30px;
+    background: var(--vermelho);
+    color: var(--branco);
+    font-family: var(--fonte);
+    font-size: 7px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contato h2 span {
+    color: var(--vermelho);
+}
+
+/* RODAPÉ */
+
+.rodape {
+    min-height: 65px;
+    padding: 14px 10px;
+    background: var(--branco);
+    text-align: center;
+}
+
+.rodape>p {
+    font-size: 6px;
+    color: var(--cinza-texto);
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.redes-sociais a {
+    font-size: 6px;
+    color: #555555;
+}
+
+.redes-sociais a:hover {
+    color: var(--vermelho);
+}
+
+/* TELAS MAIORES */
+
+@media (min-width: 600px) {
+    .cabecalho {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .menu {
+        gap: 24px;
+    }
+
+    .inicio {
+        min-height: 450px;
+    }
+
+    .inicio h1 {
+        font-size: 48px;
+    }
+
+    .inicio p {
+        font-size: 13px;
+    }
+
+    .botao {
+        min-height: 40px;
+        font-size: 12px;
+    }
+
+    .sobre {
+        padding: 70px 10%;
+    }
+
+    .sobre h2 {
+        font-size: 35px;
+    }
+
+    .sobre p,
+    .projetos-intro p {
+        font-size: 12px;
+    }
+
+    .foto-sobre {
+        width: 250px;
+        height: 170px;
+    }
+
+    .projetos-intro h2 {
+        font-size: 24px;
+    }
+
+    .lista-projetos {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-projeto {
+        height: 220px;
+    }
+
+    .card-info {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .card-info h3 {
+        font-size: 14px;
+    }
+
+    .card-info p {
+        font-size: 10px;
+    }
+
+    .botao-card {
+        min-height: 30px;
+        font-size: 10px;
+    }
+
+    .contato h2 {
+        font-size: 32px;
+    }
+
+    .contato-intro p {
+        font-size: 12px;
+    }
+
+    .campo label,
+    .campo input,
+    .campo textarea,
+    .botao-enviar {
+        font-size: 11px;
+    }
+
+    .rodape>p,
+    .redes-sociais a {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 900px) {
+    .inicio {
+        min-height: 550px;
+    }
+
+    .sobre {
+        padding: 90px 20%;
+    }
+
+    .projetos {
+        padding: 70px 15%;
+    }
+
+    .lista-projetos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card-projeto {
+        height: 260px;
+    }
+
+    .contato {
+        padding: 70px 20%;
+    }
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Kauã de Caires">
+    <meta name="description" content="Portfólio de Kauã de Caires: jogos, criatividade e projetos digitais.">
+
+    <title>K.C.S | Portfólio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho" id="inicio">
+        <a href="#inicio" class="logo">K.C.S</a>
+
+        <nav class="menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contatos</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Apresentação -->
+        <section class="inicio">
+            <div class="inicio-conteudo">
+
+                <h1>
+                    Jogos incríveis,<br>
+                    <span>criatividade</span><br>
+                    sem limites.
+                </h1>
+
+                <p>
+                    Crio experiências digitais, personagens e mundos
+                    que transformam ideias em jogos.
+                </p>
+
+                <a href="#projetos" class="botao botao-principal">
+                    Ver meus projetos
+                </a>
+
+                <a href="#contato" class="botao botao-secundario">
+                    Fale comigo
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Sobre mim -->
+        <section class="sobre" id="sobre">
+
+            <div class="sobre-conteudo">
+
+                <h2>
+                    Muito prazer, sou<br>
+                    o <span>Kauã</span>
+                </h2>
+
+                <p>
+                    Sou criador de jogos e gosto de transformar ideias
+                    em experiências interativas. Trabalho com criação
+                    de personagens, histórias, cenários e mecânicas
+                    para desenvolver jogos divertidos e criativos.
+                </p>
+
+                <p>
+                    Além de desenvolver histórias, também curto música,
+                    jogos, esportes e filmes.
+                </p>
+
+            </div>
+
+            <img class="foto-sobre" src="imagens/pinguin.jpg" alt="Pinguins juntos na natureza">
+
+        </section>
+
+        <!-- Projetos -->
+        <section class="projetos" id="projetos">
+
+            <div class="projetos-intro">
+                <h2>Trabalhos relevantes</h2>
+
+                <p>
+                    Confira alguns dos projetos de jogos que desenvolvi,
+                    explorando diferentes estilos, histórias e mecânicas.
+                </p>
+            </div>
+
+            <div class="lista-projetos">
+
+                <article class="card-projeto">
+                    <img src="imagens/pinguin.jpg" alt="Imagem do projeto PROA">
+
+                    <div class="card-info">
+                        <h3>Projeto PROA</h3>
+
+                        <p>
+                            Projeto focado em ajudar jovens de baixa renda.
+                        </p>
+
+                        <a href="#contato" class="botao-card">
+                            Saiba mais
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card-projeto">
+                    <img src="imagens/pinguin.jpg" alt="Imagem do segundo projeto">
+
+                    <div class="card-info">
+                        <h3>Projeto PROA</h3>
+
+                        <p>
+                            Projeto focado em ajudar jovens de baixa renda.
+                        </p>
+
+                        <a href="#contato" class="botao-card">
+                            Saiba mais
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card-projeto">
+                    <img src="imagens/pinguin.jpg" alt="Imagem do terceiro projeto">
+
+                    <div class="card-info">
+                        <h3>Projeto PROA</h3>
+
+                        <p>
+                            Projeto focado em ajudar jovens de baixa renda.
+                        </p>
+
+                        <a href="#contato" class="botao-card">
+                            Saiba mais
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Contato -->
+        <section class="contato" id="contato">
+
+            <div class="contato-intro">
+                <h2>
+                    Pronto(a) para<br>
+                    tirar sua <span> ideia </span> do <br>
+                    papel?
+                </h2>
+
+                <p>
+                    Vamos transformar sua ideia em uma experiência
+                    incrível! Entre em contato e conte um pouco
+                    sobre seu projeto.
+                </p>
+            </div>
+
+            <form class="formulario" action="#" method="get">
+
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Pedro Gustavo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: email@email.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Ex: (11) 99999-9999">
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5"
+                        placeholder="Ex: Olá, gostaria de falar sobre uma proposta bacana..." required></textarea>
+                </div>
+
+                <button type="submit" class="botao-enviar">
+                    Entrar em contato
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+
+        <p>
+            © 2025 Kauã de Caires. Todos os direitos reservados.
+        </p>
+
+        <nav class="redes-sociais">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/K-oss-ui" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </nav>
+
+    </footer>
+
+</body>
+
+</html>
