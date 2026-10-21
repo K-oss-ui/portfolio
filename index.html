@@ -8,7 +8,7 @@
     <meta name="author" content="Kauã de Caires">
     <meta name="description" content="Portfólio de Kauã de Caires: jogos, criatividade e projetos digitais.">
 
-    <title>K.C.S | Portfólio</title>
+    <title>K.C.S.B | Portfólio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
 <body>
 
     <header class="cabecalho" id="inicio">
-        <a href="#inicio" class="logo">K.C.S</a>
+        <a href="#inicio" class="logo">K.C.S.B</a>
 
         <nav class="menu">
             <a href="#sobre">Sobre</a>
@@ -189,13 +189,38 @@
 
                 <div class="campo">
                     <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="5"
-                        placeholder="Ex: Olá, gostaria de falar sobre uma proposta bacana..." required></textarea>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem..."
+                        required></textarea>
                 </div>
 
                 <button type="submit" class="botao-enviar">
                     Entrar em contato
                 </button>
+
+            </form>
+
+            <script>
+                document.getElementById("formulario").addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    const nome = document.getElementById("nome").value;
+                    const email = document.getElementById("email").value;
+                    const telefone = document.getElementById("telefone").value;
+                    const mensagem = document.getElementById("mensagem").value;
+
+                    const texto = `Olá! Meu nome é ${nome}.
+Email: ${email}
+Telefone: ${telefone}
+Mensagem: ${mensagem}`;
+
+                    const numero = "5511999999999";
+
+                    window.open(
+                        `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`,
+                        "_blank"
+                    );
+                });
+            </script>
 
             </form>
 
